@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import ArticleList from '../component/ArticleList';
 
 
 export default function Home({articles}) {
@@ -11,9 +12,7 @@ export default function Home({articles}) {
          <meta name="Next programing" content="this is next programing application"/>
        </Head>
        <h1>Welcome to Next</h1>
-       {articles.map((x, index) => (<React.Fragment key={index}>
-          <h4>{x.title}</h4>
-       </React.Fragment>))}
+      <ArticleList articles={articles}/>
      </div>
   )
 }
